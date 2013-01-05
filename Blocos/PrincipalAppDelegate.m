@@ -13,6 +13,32 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //declaracao de um bloco
+    //tipo de retorno(nome do bloco)(possiveis parametros);
+    void(^contador)(void);
+    
+    contador = ^{
+        //conjunto de instrcoes para a execucao quando usarmos o bloco
+        for (int i = 0; i<100; i++)
+        {
+            NSLog(@"Contando %d", i);
+            
+        }
+    };
+    
+    //para chamar a execucao de um bloco
+    contador();
+    
+    //como criar um bloco com parametros?
+    int (^soma)(int, int);
+    
+    soma = ^(int x, int y){
+        
+        return x + y;
+    };
+    
+    NSLog(@"A soma de dois numeros e: %d", soma(3,4));
+    
     return YES;
 }
 							

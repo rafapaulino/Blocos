@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface PrincipalViewController : UIViewController
+{
+    IBOutlet UIView *quadrado;
+}
+
+-(IBAction)botaoAnimarClicado:(id)sender;
 
 @end
